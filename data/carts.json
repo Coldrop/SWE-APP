@@ -1,0 +1,35 @@
+[
+    {
+        "customer_id": "guest",
+        "items": [
+            {
+                "product": {
+                    "product_id": 3,
+                    "name": "Headphones",
+                    "description": "Noise cancelling",
+                    "price": 299,
+                    "stock": 18,
+                    "image": "",
+                    "archived": false
+                },
+                "quantity": 4
+            },
+            {
+                "product": {
+                    "product_id": 1,
+                    "name": "Laptop",
+                    "description": "Powerful i7 laptop",
+                    "price": 1500,
+                    "stock": 4,
+                    "image": "laptop.jpg",
+                    "archived": false
+                },
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "customer_id": "C001",
+        "items": []
+    }
+]

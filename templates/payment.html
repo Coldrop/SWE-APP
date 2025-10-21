@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWE Electronics - Payment</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="/static/images/logo.png" alt="AWE Electronics Logo" class="logo">
+        <h1>AWE Electronics</h1>
+    </header>
+    <nav>
+        <a href="/store">Catalogue</a>
+        <a href="/store/cart">Cart</a>
+        <a href="/admin">Admin</a>
+    </nav>
+    <div class="container">
+        <ul class="flash-messages">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </ul>
+        <h2>Payment</h2>
+        <p>Invoice: {{ invoice.invoice_id }}</p>
+        <p>Order ID: {{ invoice.order_id }}</p>
+        <p>Total: ${{ invoice.total }}</p>
+        <p>Status: {{ invoice.status }}</p>
+        {% if invoice.status == 'Unpaid' %}
+            <form method="POST">
+                <label for="payment_method">Payment Method:</label>
+                <select id="payment_method" name="payment_method">
+                    <option value="PayPal">PayPal</option>
+                    <option value="CreditCard">Credit Card</option>
+                </select>
+                <button type="submit">Pay Now</button>
+            </form>
+        {% endif %}
+        <a href="/store">Back to Store</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWE Electronics - Confirm Order</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="/static/images/logo.png" alt="AWE Electronics Logo" class="logo">
+        <h1>AWE Electronics</h1>
+    </header>
+    <nav>
+        <a href="/store">Catalogue</a>
+        <a href="/store/cart">Cart</a>
+        <a href="/admin">Admin</a>
+    </nav>
+    <div class="container">
+        <ul class="flash-messages">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </ul>
+        <h2>Confirm Order</h2>
+        {% if cart.get_items() %}
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+                {% for item in cart.get_items() %}
+                    <tr>
+                        <td>{{ item.product.name }}</td>
+                        <td>${{ item.product.price }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>${{ item.get_total_price() }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <p>Total: ${{ cart.calculate_total() }}</p>
+        {% endif %}
+        <form method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ session.get('user_name', '') }}" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ session.get('user_email', '') }}" required>
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" name="address" required></textarea>
+            <button type="submit">Place Order</button>
+        </form>
+        <a href="/store/cart">Back to Cart</a>
+    </div>
+</body>
+</html>

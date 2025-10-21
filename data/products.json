@@ -1,0 +1,29 @@
+[
+    {
+        "product_id": 1,
+        "name": "Speakers",
+        "description": "JBL Speakers High Quality",
+        "price": 300.0,
+        "stock": 20,
+        "image": "JBL.png",
+        "archived": false
+    },
+    {
+        "product_id": 2,
+        "name": "Phone",
+        "description": "Iphone 14 Pro Max",
+        "price": 1500.0,
+        "stock": 11,
+        "image": "phone.png",
+        "archived": false
+    },
+    {
+        "product_id": 3,
+        "name": "Laptop",
+        "description": "Macbook Pro M4",
+        "price": 2400.0,
+        "stock": 20,
+        "image": "laptop.png",
+        "archived": false
+    }
+]

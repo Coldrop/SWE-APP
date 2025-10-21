@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWE Electronics - Update Product</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="/static/images/logo.png" alt="AWE Electronics Logo" class="logo">
+        <h1>AWE Electronics</h1>
+    </header>
+    <nav>
+        <a href="/store">Catalogue</a>
+        <a href="/store/cart">Cart</a>
+        <a href="/admin">Admin</a>
+    </nav>
+    <div class="container">
+        <ul class="flash-messages">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </ul>
+        <h2>Update Product</h2>
+        <form method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ product.name }}" required>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description">{{ product.description }}</textarea>
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" value="{{ product.price }}" step="0.01" min="0" required>
+            <label for="stock">Stock:</label>
+            <input type="number" id="stock" name="stock" value="{{ product.stock }}" min="0" required>
+            <label for="image">Image (filename):</label>
+            <input type="text" id="image" name="image" value="{{ product.image }}">
+            <button type="submit">Update Product</button>
+        </form>
+        <a href="/admin">Back to Admin</a>
+    </div>
+</body>
+</html>

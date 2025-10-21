@@ -1,0 +1,14 @@
+[
+    {
+        "id": "guest",
+        "name": "Sanya Baweja",
+        "email": "bawejasanya2602@gmail.com",
+        "address": "10/60\r\nAuburn Rd"
+    },
+    {
+        "id": "C001",
+        "name": "Guest",
+        "email": "guest@example.com",
+        "address": ""
+    }
+]

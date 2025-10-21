@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWE Electronics - Cart</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="/static/images/logo.png" alt="AWE Electronics Logo" class="logo">
+        <h1>AWE Electronics</h1>
+    </header>
+    <nav>
+        <a href="/store">Catalogue</a>
+        <a href="/store/cart">Cart</a>
+        <a href="/admin">Admin</a>
+    </nav>
+    <div class="container">
+        <ul class="flash-messages">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </ul>
+        <h2>Your Cart</h2>
+        {% if cart.get_items() %}
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th>Actions</th>
+                </tr>
+                {% for item in cart.get_items() %}
+                    <tr>
+                        <td>{{ item.product.name }}</td>
+                        <td>${{ item.product.price }}</td>
+                        <td>
+                            <form method="POST" action="/store/cart/update/{{ item.product.product_id }}">
+                                <input type="number" name="quantity" value="{{ item.quantity }}" min="0">
+                                <button type="submit">Update</button>
+                            </form>
+                        </td>
+                        <td>${{ item.get_total_price() }}</td>
+                        <td><a href="/store/cart/remove/{{ item.product.product_id }}">Remove</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <p>Total: ${{ cart.calculate_total() }}</p>
+            <a href="/store/order/confirm"><button>Proceed to Checkout</button></a>
+        {% else %}
+            <p>Your cart is empty.</p>
+        {% endif %}
+        <a href="/store">Continue Shopping</a>
+    </div>
+</body>
+</html>

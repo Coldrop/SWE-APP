@@ -1,0 +1,415 @@
+[
+    {
+        "id": "O1",
+        "customer_id": "guest",
+        "items": [
+            {
+                "product": {
+                    "product_id": 3,
+                    "name": "Headphones",
+                    "description": "Noise cancelling",
+                    "price": 299,
+                    "stock": 24,
+                    "image": "",
+                    "archived": false
+                },
+                "quantity": 2,
+                "subtotal": 598
+            }
+        ],
+        "total": 598,
+        "delivery_address": "10/60\r\nAuburn Rd",
+        "status": "Paid"
+    },
+    {
+        "id": "O2",
+        "customer_id": "guest",
+        "items": [
+            {
+                "product": {
+                    "product_id": 1,
+                    "name": "Laptop",
+                    "description": "Powerful i7 laptop",
+                    "price": 1500,
+                    "stock": 5,
+                    "image": "laptop.jpg",
+                    "archived": false
+                },
+                "quantity": 5,
+                "subtotal": 7500
+            },
+            {
+                "product": {
+                    "product_id": 3,
+                    "name": "Headphones",
+                    "description": "Noise cancelling",
+                    "price": 299,
+                    "stock": 22,
+                    "image": "",
+                    "archived": false
+                },
+                "quantity": 1,
+                "subtotal": 299
+            }
+        ],
+        "total": 7799,
+        "delivery_address": "10/60\r\nAuburn Rd",
+        "status": "Paid"
+    },
+    {
+        "id": "O3",
+        "customer_id": "C001",
+        "items": [
+            {
+                "product": {
+                    "product_id": 1,
+                    "name": "Laptop",
+                    "description": "Powerful i7 laptop",
+                    "price": 1500,
+                    "stock": 8,
+                    "image": "laptop.jpg",
+                    "archived": false
+                },
+                "quantity": 2,
+                "subtotal": 3000
+            }
+        ],
+        "total": 3000,
+        "delivery_address": "10/60\r\nAuburn Rd",
+        "status": "Paid"
+    },
+    {
+        "id": "O4",
+        "customer_id": "C001",
+        "items": [
+            {
+                "product": {
+                    "product_id": 4,
+                    "name": "Speakers",
+                    "description": "Wireless High quality",
+                    "price": 150.0,
+                    "stock": 16,
+                    "image": "",
+                    "archived": false
+                },
+                "quantity": 4,
+                "subtotal": 600.0
+            }
+        ],
+        "total": 600.0,
+        "delivery_address": "10/60\r\nAuburn Rd",
+        "status": "Paid"
+    },
+    {
+        "id": "O5",
+        "customer_id": "C001",
+        "items": [
+            {
+                "product": {
+                    "product_id": 1,
+                    "name": "Laptop",
+                    "description": "Powerful i7 laptop",
+                    "price": 1500,
+                    "stock": 2,
+                    "image": "laptop.jpg",
+                    "archived": false
+                },
+                "quantity": 8,
+                "subtotal": 12000
+            }
+        ],
+        "total": 12000,
+        "delivery_address": "10/60\r\nAuburn Rd",
+        "status": "Paid"
+    },
+    {
+        "id": "O6",
+        "customer_id": "C001",
+        "items": [
+            {
+                "product": {
+                    "product_id": 2,
+                    "name": "Speakers",
+                    "description": "wfwf",
+                    "price": 200.0,
+                    "stock": 18,
+                    "image": "",
+                    "archived": false
+                },
+                "quantity": 5,
+                "subtotal": 1000.0
+            }
+        ],
+        "total": 1000.0,
+        "delivery_address": "10/60\r\nAuburn Rd",
+        "status": "Paid"
+    },
+    {
+        "id": "O7",
+        "customer_id": "C001",
+        "items": [
+            {
+                "product": {
+                    "product_id": 2,
+                    "name": "Speakers",
+                    "description": "wfwf",
+                    "price": 200.0,
+                    "stock": 19,
+                    "image": "",
+                    "archived": false
+                },
+                "quantity": 1,
+                "subtotal": 200.0
+            },
+            {
+                "product": {
+                    "product_id": 1,
+                    "name": "Laptop",
+                    "description": "Powerful i7 laptop",
+                    "price": 1500,
+                    "stock": 6,
+                    "image": "laptop.jpg",
+                    "archived": false
+                },
+                "quantity": 4,
+                "subtotal": 6000
+            }
+        ],
+        "total": 6200.0,
+        "delivery_address": "10/60\r\nAuburn Rd",
+        "status": "Paid"
+    },
+    {
+        "id": "O8",
+        "customer_id": "C001",
+        "items": [
+            {
+                "product": {
+                    "product_id": 2,
+                    "name": "Speakers",
+                    "description": "wfwf",
+                    "price": 200.0,
+                    "stock": 18,
+                    "image": "",
+                    "archived": false
+                },
+                "quantity": 1,
+                "subtotal": 200.0
+            },
+            {
+                "product": {
+                    "product_id": 1,
+                    "name": "phone",
+                    "description": "ewwd",
+                    "price": 200.0,
+                    "stock": 18,
+                    "image": "",
+                    "archived": false
+                },
+                "quantity": 2,
+                "subtotal": 400.0
+            }
+        ],
+        "total": 600.0,
+        "delivery_address": "polili",
+        "status": "Paid"
+    },
+    {
+        "id": "O9",
+        "customer_id": "C001",
+        "items": [
+            {
+                "product": {
+                    "product_id": 1,
+                    "name": "Laptop",
+                    "description": "Macbook Pro M4",
+                    "price": 2500.0,
+                    "stock": 19,
+                    "image": "laptop.png",
+                    "archived": false
+                },
+                "quantity": 1,
+                "subtotal": 2500.0
+            }
+        ],
+        "total": 2500.0,
+        "delivery_address": "10/60 Auburn Road",
+        "status": "Paid"
+    },
+    {
+        "id": "O10",
+        "customer_id": "C001",
+        "items": [
+            {
+                "product": {
+                    "product_id": 3,
+                    "name": "Phone",
+                    "description": "Iphone 14 Pro Max-Peach colour",
+                    "price": 1300.0,
+                    "stock": 20,
+                    "image": "phone.png",
+                    "archived": false
+                },
+                "quantity": 5,
+                "subtotal": 6500.0
+            }
+        ],
+        "total": 6500.0,
+        "delivery_address": "10/60\r\nAuburn Rd",
+        "status": "Paid"
+    },
+    {
+        "id": "O11",
+        "customer_id": "C001",
+        "items": [
+            {
+                "product": {
+                    "product_id": 2,
+                    "name": "JBL Speakers",
+                    "description": "High Quality Speakers from JBL",
+                    "price": 200.0,
+                    "stock": 17,
+                    "image": "JBL.png",
+                    "archived": false
+                },
+                "quantity": 3,
+                "subtotal": 600.0
+            }
+        ],
+        "total": 600.0,
+        "delivery_address": "10/60\r\nAuburn Rd",
+        "status": "Paid"
+    },
+    {
+        "id": "O12",
+        "customer_id": "C001",
+        "items": [
+            {
+                "product": {
+                    "product_id": 1,
+                    "name": "Laptop",
+                    "description": "Macbook Pro M4",
+                    "price": 2500.0,
+                    "stock": 18,
+                    "image": "laptop.png",
+                    "archived": false
+                },
+                "quantity": 2,
+                "subtotal": 5000.0
+            }
+        ],
+        "total": 5000.0,
+        "delivery_address": "10/60\r\nAuburn Rd",
+        "status": "Paid"
+    },
+    {
+        "id": "O13",
+        "customer_id": "C001",
+        "items": [
+            {
+                "product": {
+                    "product_id": 1,
+                    "name": "Laptop",
+                    "description": "Macbook Pro M4",
+                    "price": 2500.0,
+                    "stock": 17,
+                    "image": "laptop.png",
+                    "archived": false
+                },
+                "quantity": 3,
+                "subtotal": 7500.0
+            }
+        ],
+        "total": 7500.0,
+        "delivery_address": "10/60\r\nAuburn Rd",
+        "status": "Paid"
+    },
+    {
+        "id": "O14",
+        "customer_id": "C001",
+        "items": [
+            {
+                "product": {
+                    "product_id": 3,
+                    "name": "Phone",
+                    "description": "Iphone 14 Pro Max-Peach colour",
+                    "price": 1300.0,
+                    "stock": 25,
+                    "image": "phone.png",
+                    "archived": false
+                },
+                "quantity": 5,
+                "subtotal": 6500.0
+            }
+        ],
+        "total": 6500.0,
+        "delivery_address": "10/60\r\nAuburn Rd",
+        "status": "Paid"
+    },
+    {
+        "id": "O15",
+        "customer_id": "C001",
+        "items": [
+            {
+                "product": {
+                    "product_id": 3,
+                    "name": "Phone",
+                    "description": "Iphone 14 Pro Max-Peach colour",
+                    "price": 1300.0,
+                    "stock": 27,
+                    "image": "phone.png",
+                    "archived": false
+                },
+                "quantity": 3,
+                "subtotal": 3900.0
+            }
+        ],
+        "total": 3900.0,
+        "delivery_address": "123, John street",
+        "status": "Paid"
+    },
+    {
+        "id": "O16",
+        "customer_id": "C001",
+        "items": [
+            {
+                "product": {
+                    "product_id": 2,
+                    "name": "Phone",
+                    "description": "Iphone 14 Pro Max",
+                    "price": 1500.0,
+                    "stock": 12,
+                    "image": "phone.png",
+                    "archived": false
+                },
+                "quantity": 3,
+                "subtotal": 4500.0
+            }
+        ],
+        "total": 4500.0,
+        "delivery_address": "711 Glenferrie Road",
+        "status": "Paid"
+    },
+    {
+        "id": "O17",
+        "customer_id": "C001",
+        "items": [
+            {
+                "product": {
+                    "product_id": 2,
+                    "name": "Phone",
+                    "description": "Iphone 14 Pro Max",
+                    "price": 1500.0,
+                    "stock": 11,
+                    "image": "phone.png",
+                    "archived": false
+                },
+                "quantity": 1,
+                "subtotal": 1500.0
+            }
+        ],
+        "total": 1500.0,
+        "delivery_address": "711 Glenferrie Road",
+        "status": "Pending"
+    }
+]

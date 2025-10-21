@@ -1,18 +1,27 @@
-# Use an official Python 3.14 runtime as the base image
-FROM python:3.14-slim
+# Dockerfile
+FROM python:3.11-slim
 
-# Set the working directory inside the container
+# System deps (optional: psycopg2, build tools)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential libpq-dev && \
+    rm -rf /var/lib/apt/lists/*
+
+# App directory
 WORKDIR /app
 
-# Copy requirements file and install dependencies
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy & install
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir gunicorn
 
-# Copy the entire project folder
+# Copy the rest
 COPY . .
 
-# Expose port 5000 (Flask's default port)
-EXPOSE 5000
+# Healthcheck (expects /health route; add it in Flask)
+HEALTHCHECK --interval=30s --timeout=3s CMD curl -f http://localhost:8000/health || exit 1
 
-# Command to run the Flask app
-CMD ["python", "app.py"]
+# Expose gunicorn port
+EXPOSE 8000
+
+# Gunicorn entry (adjust module:app if needed)
+CMD ["gunicorn", "-w", "2", "-k", "gthread", "-b", "0.0.0.0:8000", "app:app"]

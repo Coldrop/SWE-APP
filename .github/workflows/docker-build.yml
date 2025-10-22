@@ -6,7 +6,27 @@ on:
   workflow_dispatch:
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install --no-cache-dir pytest
+          pip install --no-cache-dir -r requirements.txt
+
+      - name: Run tests
+        run: pytest
   build:
+    needs: test
     runs-on: ubuntu-latest
 
     steps:

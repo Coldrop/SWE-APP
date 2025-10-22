@@ -41,6 +41,8 @@ docker run -it -p 8000:8000 sehaj170/swe-app
 ```
 - Open http://localhost:8000 in a browser.
 
+Opening /metrics gives you information on how the thread you are on is running.
+
 ## Folder Structure
 root/  
 ├── app.py              # Main app  

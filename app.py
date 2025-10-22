@@ -1,4 +1,4 @@
-from flask import Flask, redirect
+from flask import Flask, redirect, jsonify
 from routes.admin_routes import admin_blueprint
 from routes.store_routes import store_blueprint
 
@@ -14,6 +14,9 @@ app.register_blueprint(store_blueprint, url_prefix='/store')
 def index():
     return redirect('/store')
 
+@app.route('/health')
+def health():
+    return jsonify({'status': 'healthy'}), 200
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
-    
+    app.run(host='0.0.0.0', port=5000)

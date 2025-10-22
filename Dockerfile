@@ -3,7 +3,7 @@ FROM python:3.11-slim
 
 # System deps (optional: psycopg2, build tools)
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential libpq-dev && \
+    build-essential libpq-dev curl && \
     rm -rf /var/lib/apt/lists/*
 
 # App directory

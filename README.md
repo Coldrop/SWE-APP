@@ -29,9 +29,9 @@ To build the project manually:
 root/  
 ├── app.py              # Main app  
 ├── Dockerfile          # Dockerfile, container definition  
+├── .github/workflows/  # GitHub automated CI/CD  
 ├── models/             # Code logic (e.g., shopping_cart.py)  
 ├── routes/             # Page routes (e.g., store_routes.py)  
 ├── templates/          # Web pages (e.g., home.html)  
 ├── static/css/         # Styles (styles.css)  
 ├── data/               # JSON data (e.g., products.json)  
-├── .github/workflows/  # GitHub automated CI/CD  

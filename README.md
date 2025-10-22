@@ -13,16 +13,16 @@ This repo contains an app to be deployed for the SWE40006 Project Presentation/D
 
 ## Installation
 ### Latest Build
-To install the project, download the latest release from Docker Hub by running: `docker pull sehaj170/swe-app`
+To install the project, download the latest release from Docker Hub by running: `docker pull sehaj170/swe-app:latest`
 
 ### Building Manually
 To build the project manually:
 - Download the project zip.
 - Open terminal, navigate to the project folder.
-- Run: `docker build -t swe-app .`
+- Run: `docker build -t sehaj170/swe-app .`
 
 ## Running
-- Run: `docker run -it -p 8000:8000 swe-app`
+- Run: `docker run -it -p 8000:8000 sehaj170/swe-app`
 - Open http://localhost:8000 in a browser.
 
 ## Folder Structure

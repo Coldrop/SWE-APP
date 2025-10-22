@@ -1,0 +1,16 @@
+# Dockerfile
+FROM python:3.11-slim
+
+# App directory
+WORKDIR /app
+
+# Copy & install
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir pytest
+
+# Copy the rest
+COPY . .
+
+# Run tests.
+CMD ["pytest"]

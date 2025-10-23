@@ -52,13 +52,13 @@ jobs:
       - name: Deploy to Azure Staging
         uses: azure/webapps-deploy@v2
         with:
-          app-name: swe-app-staging
+          app-name: stagingapp
           publish-profile: ${{ secrets.AZURE_STAGING_PUBLISH_PROFILE }}
           images: ${{ secrets.DOCKERHUB_USERNAME }}/swe-app:latest
       - name: Deploy to Azure Production
         if: github.event_name == 'release'
         uses: azure/webapps-deploy@v2
         with:
-          app-name: swe-app-prod
+          app-name: productionapp
           publish-profile: ${{ secrets.AZURE_PROD_PUBLISH_PROFILE }}
           images: ${{ secrets.DOCKERHUB_USERNAME }}/swe-app:latest

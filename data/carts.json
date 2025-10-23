@@ -5,7 +5,7 @@
             {
                 "product": {
                     "product_id": 3,
-                    "name": "Headphones",
+                    "name": "Headphone",
                     "description": "Noise cancelling",
                     "price": 299,
                     "stock": 18,

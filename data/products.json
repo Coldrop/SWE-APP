@@ -1,7 +1,7 @@
 [
     {
         "product_id": 1,
-        "name": "Speakers",
+        "name": "Speaker",
         "description": "JBL Speakers High Quality",
         "price": 300.0,
         "stock": 20,

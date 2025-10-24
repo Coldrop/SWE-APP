@@ -37,6 +37,7 @@ def view_cart():
 
 @store_blueprint.route('/cart/add/<int:product_id>', methods=['POST'])
 def add_to_cart(product_id):
+    return redirect(url_for('store.view_cart'))
     customer = get_customer()
     product = catalogue.get_product(product_id)
     if not product or product.archived:
